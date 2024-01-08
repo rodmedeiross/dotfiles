@@ -1,0 +1,37 @@
+[user]
+	email = roddmedeiross@gmail.com
+	name = Rodrigo Medeiros
+
+[init]
+	defaultBranch = master
+
+[alias]
+    c = commit -v
+    co = checkout
+    cob = checkout -b
+    s = status
+    br = branch
+    d = diff
+    dd = diff --cached
+    l = log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    cp = cherry-pick
+    ps = push
+    pl = pull
+    pb = pull --rebase
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    line-numbers = true
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
