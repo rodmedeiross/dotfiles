@@ -31,7 +31,7 @@ Then simply use stow to install the dotfiles you want to use:
 
 Consistent colors
 -----------------
-To get the most out of my dotfiles I recommend using matching colorschemes for various applications. One way would be to use [base16-shell](https://github.com/chriskempson/base16-shell) on your system, define it in your `.zshrc` and let that handle setting your colors globally. Alternatively, you can pick a well-loved colorscheme and set it up in your terminal emulator (e.g. alacritty), vim, and other tools you'd want to use. 
+To get the most out of my dotfiles I recommend using matching colorschemes for various applications. One way would be to use [base16-shell](https://github.com/chriskempson/base16-shell) on your system, define it in your `.zshrc` and let that handle setting your colors globally. Alternatively, you can pick a well-loved colorscheme and set it up in your terminal emulator (e.g. alacritty, tilix, tmux), vim, and other tools you'd want to use. 
 
 Additional configuration
 ------------------------
