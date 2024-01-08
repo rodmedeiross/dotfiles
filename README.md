@@ -7,7 +7,7 @@ Installation
 ------------
 Your first step is to clone this repository:
 
-    git clone https://github.com/hamvocke/dotfiles.git ~/.dotfiles
+    git clone https://github.com/rodmedeiross/dotfiles.git ~/.dotfiles
 
 ### Manual Installation
 Create symbolic links for the configurations you want to use, e.g.:
@@ -36,3 +36,7 @@ To get the most out of my dotfiles I recommend using matching colorschemes for v
 Additional configuration
 ------------------------
 Some of the configurations need additional setup or configuration. If that's the case you can find a `README.md` file in the application's directory. Make sure to take a look at it to see what else there is to do to make the configuration work on your system.
+
+Credits
+------------------------
+[Ham Vocke](https://github.com/hamvocke)
