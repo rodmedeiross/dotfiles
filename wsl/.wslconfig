@@ -1,0 +1,6 @@
+[wsl2]
+options=metadata,umask=22,fmask=11
+memory=26GB
+processors=8
+swap=6GB
+nestedVirtualization=true
