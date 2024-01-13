@@ -115,7 +115,6 @@ symbol = " "
 
 [nodejs]
 format = "via [ $version](bold green) "
-disabled = true
 
 [python]
 symbol = " "
