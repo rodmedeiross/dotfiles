@@ -89,6 +89,9 @@ source $ZSH/oh-my-zsh.sh
 export DOTNET_ROOT=$(pwd)/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
+# Java Setup
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 # Start Starship - Zshell
 eval "$(starship init zsh)"
 
