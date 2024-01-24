@@ -92,6 +92,10 @@ export PATH=$PATH:$DOTNET_ROOT
 # Java Setup
 . ~/.asdf/plugins/java/set-java-home.zsh
 
+# Kotlin Setuo - Android Studio Plugin
+export KOTLIN_ROOT=$(pwd)/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
+export PATH=$PATH:$KOTLIN_ROOT/bin
+
 # Start Starship - Zshell
 eval "$(starship init zsh)"
 

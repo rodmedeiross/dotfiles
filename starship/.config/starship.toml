@@ -5,14 +5,17 @@ add_newline = true
 
 # Change the default prompt format
 format = """\
-[╭╴](238)$env_var $all\
+[╭╴](238)$env_var $battery $all\
 [╰─](238)$character"""
 
 # Change the default prompt characters
 [character]
 success_symbol = "[➜](238)"
-error_symbol = "[✗](238)"
+error_symbol = "[✗](223)"
 
+[battery]
+disabled = false
+discharging_symbol = "󰯈 "
 # [os]
 # disabled = false
 # format = "$symbol "
