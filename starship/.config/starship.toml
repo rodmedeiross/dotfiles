@@ -138,9 +138,6 @@ symbol = " "
 [elixir]
 symbol = " "
 
-[elm]
-symbol = " "
-
 [golang]
 symbol = "󰟓 "
 
@@ -176,3 +173,15 @@ symbol = " "
 
 [lua]
 symbol = " "
+
+[kotlin]
+symbol = ' '
+kotlin_binary = 'kotlin'
+style = '165'
+
+[gradle]
+symbol = ' '
+style = 'green'
+
+[haskell]
+symbol = ' '
