@@ -3,8 +3,9 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- Font Config
-config.font = wezterm.font 'FiraCode Nerd Font'
-config.font_size = 12
+-- config.font = wezterm.font 'FiraCode Nerd Font'
+config.font = wezterm.font 'Dank Mono'
+config.font_size = 14
 
 -- Window Config
 config.window_background_opacity = 0.9

@@ -92,7 +92,7 @@ export PATH=$PATH:$DOTNET_ROOT
 # Java Setup
 . ~/.asdf/plugins/java/set-java-home.zsh
 
-# Kotlin Setuo - Android Studio Plugin
+# Kotlin Setup - Android Studio Plugin
 export KOTLIN_ROOT=$(pwd)/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
 export PATH=$PATH:$KOTLIN_ROOT/bin
 
@@ -112,7 +112,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         source "$BASE16_SHELL/profile_helper.sh"
 
-base16_ocean
+./.base16-rose-pine-moon.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

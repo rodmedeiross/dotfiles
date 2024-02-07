@@ -1,21 +1,52 @@
-# ~/.config/starship.toml
+command_timeout = 1000
 
-# Inserts a blank line between shell prompts
 add_newline = true
 
 # Change the default prompt format
-format = """\
-[╭╴](238)$env_var $battery $all\
-[╰─](238)$character"""
+# format = """\
+# [╭╴](238)$env_var $all\
+# [╰─](238)$character"""
 
-# Change the default prompt characters
+format = """\
+$env_var $all \
+$character"""
+
+right_format = '''$battery$memory_usage$cmd_duration'''
+
+palette = 'rose_pine_moon'
+
+[palettes.rose_pine_moon]
+base = '#232136'
+surface = '#2a273f'
+overlay = '#393552'
+muted = '#6e6a86'
+subtle = '#908caa'
+text = '#e0def4'
+love = '#eb6f92'
+gold = '#f6c177'
+gold_less = '#eba03b'
+rose = '#ea9a97'
+pine = '#3e8fb0'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+green = '#82968a'
+highlight_low = '#2a283e'
+highlight_med = '#44415a'
+highlight_high = '#56526e'
+
 [character]
-success_symbol = "[➜](238)"
-error_symbol = "[✗](223)"
+success_symbol = "[➜](pine)"
+error_symbol = "[➜](love)"
 
 [battery]
 disabled = false
 discharging_symbol = "󰯈 "
+
+[[battery.display]]
+threshold = 5
+style = 'bold love'
+charging_symbol = '󰂉 '
+
 # [os]
 # disabled = false
 # format = "$symbol "
@@ -27,44 +58,47 @@ discharging_symbol = "󰯈 "
 # disabled = false
 
 [username]
-style_user = "210 bold"
-style_root = "black bold"
+style_user = "fg:rose bold"
+style_root = "fg:rose bold"
 format = "[$user]($style) "
-disabled = false  # disable in powershell
+disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = "on [MacBook-Pro](bold 223) "
-disabled = false
+format = "on [MacBook-Pro](bold overlay) "
+disabled = true
 
 [directory]
-truncation_length = 3
+truncation_length = 5
 truncation_symbol = "…/"
-home_symbol = "󰋜 ~"
-read_only_style = "197"
-read_only = "  "
-format = "at [$path]($style)[$read_only]($read_only_style) "
+home_symbol = "  "
+style = 'bold foam'
+read_only_style = "love"
+read_only = "  "
+format = "[$read_only]($read_only_style)[$path]($style) "
 
 [cmd_duration]
+symbol = " "
 min_time = 4
 show_milliseconds = false
 disabled = false
-style = "bold red"
+style = "bold love"
+format = "[󱫑 $duration]($style)"
 
 [memory_usage]
 disabled = false
 threshold = -1
-symbol = " 󰍛"
-style = "dimmed 70"
+symbol = "󰍛"
+style = "pine"
 format = "[$symbol ${ram}]($style) "
 
 [git_branch]
 symbol = "󰊢 "
 format = "on [$symbol$branch]($style) "
-truncation_length = 20
+truncation_length = 30
 truncation_symbol = "…/"
-style = "bold 208"
+style = "bold gold_less"
 
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style) '
@@ -85,7 +119,8 @@ deleted = " "
 symbol = "󰏗 "
 
 [terraform]
-format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+symbol = " "
+format = "via [$symbol$version]($style) [$workspace]($style) "
 
 [vagrant]
 format = "via [ vagrant $version]($style) "
