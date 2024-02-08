@@ -8,10 +8,12 @@ add_newline = true
 # [╰─](238)$character"""
 
 format = """\
-$env_var $all \
+$env_var \
+$all\
+$fill\
+$battery $memory_usage $cmd_duration\
+$line_break \
 $character"""
-
-right_format = '''$battery$memory_usage$cmd_duration'''
 
 palette = 'rose_pine_moon'
 
@@ -33,6 +35,9 @@ green = '#82968a'
 highlight_low = '#2a283e'
 highlight_med = '#44415a'
 highlight_high = '#56526e'
+
+[fill]
+symbol = " "
 
 [character]
 success_symbol = "[➜](pine)"
@@ -79,7 +84,6 @@ read_only = "  "
 format = "[$read_only]($read_only_style)[$path]($style) "
 
 [cmd_duration]
-symbol = " "
 min_time = 4
 show_milliseconds = false
 disabled = false
