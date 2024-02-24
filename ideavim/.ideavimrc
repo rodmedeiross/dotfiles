@@ -1,6 +1,6 @@
+set relativenumber
+" set nu
+
+" NERDTree settings
 Plugin 'preservim/nerdtree'
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'nerdtree'
-set NERDTree
-         
-map <C-n> :NERDTreeFocus<CR>
+map <A-n> :NERDTreeToggle<CR>

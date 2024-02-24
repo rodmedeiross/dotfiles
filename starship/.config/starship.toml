@@ -11,6 +11,15 @@ format = """\
 $env_var \
 $all\
 $fill\
+$nodejs\
+$lua\
+$rust\
+$java\
+$kotlin\
+$c\
+$golang\
+$gradle\
+$package\
 $battery $memory_usage $cmd_duration\
 $line_break \
 $character"""
@@ -88,7 +97,7 @@ min_time = 4
 show_milliseconds = false
 disabled = false
 style = "bold love"
-format = "[󱫑 $duration]($style)"
+format = "[󱫑 $duration]($style) "
 
 [memory_usage]
 disabled = false
@@ -121,6 +130,7 @@ deleted = " "
 
 [package]
 symbol = "󰏗 "
+format = "[$symbol$version](gold_less) "
 
 [terraform]
 symbol = " "
@@ -156,7 +166,7 @@ symbol = "  "
 symbol = " "
 
 [nodejs]
-format = "via [ $version](bold green) "
+format = "[ $version](bold green) "
 
 [python]
 symbol = " "
@@ -167,6 +177,10 @@ pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
+
+[c]
+symbol = " "
+format = '[$symbol$version](bold 69)'
 
 [ruby]
 symbol = " "
@@ -179,12 +193,14 @@ symbol = " "
 
 [golang]
 symbol = "󰟓 "
+format = "[$symbol$version](bold 39)"
 
 [hg_branch]
 symbol = " "
 
 [java]
 symbol = " "
+format = "[$symbol$version](bold rose) "
 
 [julia]
 symbol = " "
@@ -200,6 +216,7 @@ symbol = " "
 
 [rust]
 symbol = " "
+format = "[$symbol$version](bold rose) "
 
 [scala]
 symbol = " "
@@ -212,15 +229,16 @@ symbol = " "
 
 [lua]
 symbol = " "
+format = "[$symbol$version](bold 69) "
 
 [kotlin]
 symbol = ' '
 kotlin_binary = 'kotlin'
-style = '165'
+format = "[$symbol$version](bold 165) "
 
 [gradle]
 symbol = ' '
-style = 'green'
+format = "[$symbol$version](bold green) "
 
 [haskell]
 symbol = ' '

@@ -96,6 +96,9 @@ export PATH=$PATH:$DOTNET_ROOT
 export KOTLIN_ROOT=$(pwd)/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
 export PATH=$PATH:$KOTLIN_ROOT/bin
 
+# Reload prompt Rust
+rustc --version > /dev/null
+
 # Start Starship - Zshell
 eval "$(starship init zsh)"
 
@@ -112,7 +115,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         source "$BASE16_SHELL/profile_helper.sh"
 
-./.base16-rose-pine-moon.sh
+~/.base16-rose-pine-moon.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -169,4 +172,4 @@ zinit light zsh-users/zsh-completions
 alias ls="exa --icons -la"
 alias vi="nvim"
 alias cat="bat --style=auto"
-
+alias c=clear
