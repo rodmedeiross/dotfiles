@@ -96,8 +96,14 @@ export PATH=$PATH:$DOTNET_ROOT
 export KOTLIN_ROOT=$(pwd)/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
 export PATH=$PATH:$KOTLIN_ROOT/bin
 
+# Maven Setup
+export M2_HOME="/opt/apache-maven-3.9.6"
+export PATH=$PATH:$M2_HOME/bin
+
 # Reload prompt Rust
-rustc --version > /dev/null
+# rustc --version > /dev/null
+export CARGO_ROOT=$(pwd)/.cargo
+export PATH=$PATH:$CARGO_ROOT/bin
 
 # Start Starship - Zshell
 eval "$(starship init zsh)"
@@ -169,7 +175,11 @@ zinit light zsh-users/zsh-completions
 
 
 # Custom Alias
-alias ls="exa --icons -la"
+alias ls="exa --icons"
 alias vi="nvim"
+alias nv="nvim"
 alias cat="bat --style=auto"
 alias c=clear
+
+#run secrets environment
+# source ~/.secrets.sh

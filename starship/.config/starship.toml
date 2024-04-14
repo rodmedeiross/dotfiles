@@ -8,6 +8,7 @@ add_newline = true
 # [╰─](238)$character"""
 
 format = """\
+$os \
 $env_var \
 $all\
 $fill\
@@ -18,6 +19,7 @@ $java\
 $kotlin\
 $c\
 $golang\
+$python\
 $gradle\
 $package\
 $battery $memory_usage $cmd_duration\
@@ -61,8 +63,9 @@ threshold = 5
 style = 'bold love'
 charging_symbol = '󰂉 '
 
-# [os]
-# disabled = false
+[os]
+disabled = true
+style = "fg:color_fg0"
 # format = "$symbol "
 
 # # Shows an icon that should be included by zshrc script based on the distribution or os
@@ -70,6 +73,27 @@ charging_symbol = '󰂉 '
 # format = '[$env_value](bold 208)'  # removed space between distro and rest for pwsh
 # variable = "STARSHIP_DISTRO"
 # disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [username]
 style_user = "fg:rose bold"
@@ -80,7 +104,9 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = "on [MacBook-Pro](bold overlay) "
+ssh_symbol = "󰒋"
+format = "on [$ssh_symbol$hostname](bold iris) "
+trim_at = "."
 disabled = true
 
 [directory]
@@ -90,7 +116,7 @@ home_symbol = "  "
 style = 'bold foam'
 read_only_style = "love"
 read_only = "  "
-format = "[$read_only]($read_only_style)[$path]($style) "
+format = "at [$read_only]($read_only_style)[$path]($style) "
 
 [cmd_duration]
 min_time = 4
@@ -144,8 +170,8 @@ format = "via [ $version](bold purple) "
 
 [docker_context]
 symbol = "󰡨 "
-format = "via [$symbol$context]($style) "
-style = "blue bold"
+format = " [$symbol$context]($style) "
+style = "69 bold"
 only_with_files = true
 detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 detect_folders = []
@@ -171,7 +197,7 @@ format = "[ $version](bold green) "
 [python]
 symbol = " "
 pyenv_version_name = true
-format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+format = '[$symbol$version (\($virtualenv\))]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
@@ -192,7 +218,8 @@ symbol = " "
 symbol = " "
 
 [golang]
-symbol = "󰟓 "
+# symbol = "󰟓 "
+symbol = " "
 format = "[$symbol$version](bold 39)"
 
 [hg_branch]
