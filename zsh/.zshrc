@@ -183,3 +183,7 @@ alias c=clear
 
 #run secrets environment
 # source ~/.secrets.sh
+
+# Terraform autocomplete package
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
