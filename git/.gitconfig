@@ -1,9 +1,12 @@
 [user]
-	email = roddmedeiross@gmail.com
-	name = Rodrigo Medeiros
+    email = roddmedeiross@gmail.com
+    name = Rodrigo Medeiros
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
+
+[include]
+    path= ~/.gitconfig-tenants
 
 [alias]
     c = commit -v
