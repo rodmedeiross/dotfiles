@@ -20,6 +20,7 @@ $kotlin\
 $c\
 $golang\
 $python\
+$haskell\
 $gradle\
 $package\
 $battery $memory_usage $cmd_duration\
@@ -269,3 +270,4 @@ format = "[$symbol$version](bold green) "
 
 [haskell]
 symbol = ' '
+format = "[$symbol$version](bold 55) "

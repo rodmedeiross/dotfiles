@@ -105,6 +105,9 @@ export PATH=$PATH:$M2_HOME/bin
 export CARGO_ROOT=$(pwd)/.cargo
 export PATH=$PATH:$CARGO_ROOT/bin
 
+# ghcup-env
+[ -f "/Users/rodmedeiross/.ghcup/env" ] && . "/Users/rodmedeiross/.ghcup/env"
+
 # Start Starship - Zshell
 eval "$(starship init zsh)"
 
@@ -180,6 +183,9 @@ alias vi="nvim"
 alias nv="nvim"
 alias cat="bat --style=auto"
 alias c=clear
+alias dotnet64=~/.dotnet/x64/dotnet
+alias pn="corepack pnpm"
+alias yarn="corepack yarn"
 
 #run secrets environment
 # source ~/.secrets.sh
@@ -187,3 +193,6 @@ alias c=clear
 # Terraform autocomplete package
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# # Set vim
+# set -o vi
