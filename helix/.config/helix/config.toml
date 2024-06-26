@@ -1,0 +1,15 @@
+theme = "rose_pine_moon"
+
+[keys.normal]
+C-g = ':sh tmux popup -d "#{pane_current_path}" -xC -yC -w80% -h80% -E lazygit'
+C-f = ':sh tmux popup -d "#{pane_current_path}" -xC -yC -w80% -h80% -E bash "$HOME/.config/helix/scripts/yazi_integration.sh"'
+C-h = 'jump_view_left'
+C-j = 'jump_view_down'
+C-k = 'jump_view_up'
+C-l = 'jump_view_right'
+tab = 'goto_next_buffer'
+"S-tab" ='goto_previous_buffer'
+
+[editor.file-picker]
+hidden = false
+parents = true

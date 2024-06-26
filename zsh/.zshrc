@@ -86,14 +86,14 @@ source $ZSH/oh-my-zsh.sh
 . ~/.asdf/plugins/golang/set-env.zsh
 
 # .NET Setup
-export DOTNET_ROOT=$(pwd)/.dotnet
+export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
 # Java Setup
 . ~/.asdf/plugins/java/set-java-home.zsh
 
 # Kotlin Setup - Android Studio Plugin
-export KOTLIN_ROOT=$(pwd)/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
+export KOTLIN_ROOT=$HOME/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
 export PATH=$PATH:$KOTLIN_ROOT/bin
 
 # Maven Setup
@@ -102,8 +102,12 @@ export PATH=$PATH:$M2_HOME/bin
 
 # Reload prompt Rust
 # rustc --version > /dev/null
-export CARGO_ROOT=$(pwd)/.cargo
+export CARGO_ROOT=$HOME/.cargo
 export PATH=$PATH:$CARGO_ROOT/bin
+
+# Add some Mason in PATH
+export MASON_PATH=".local/share/nvim/mason/bin"
+export PATH="$PATH:$HOME/$MASON_PATH";
 
 # ghcup-env
 [ -f "/Users/rodmedeiross/.ghcup/env" ] && . "/Users/rodmedeiross/.ghcup/env"
@@ -194,5 +198,5 @@ alias yarn="corepack yarn"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
-# # Set vim
-# set -o vi
+# Set vim
+set -o vi
