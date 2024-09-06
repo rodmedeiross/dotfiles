@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Golang Setup
 . ~/.asdf/plugins/golang/set-env.zsh
+# Must to change with asdf version
+export GOPATH="$(asdf where golang)/packages/bin"
+export PATH=$PATH:$GOPATH
 
 # .NET Setup
 export DOTNET_ROOT=$HOME/.dotnet
