@@ -98,6 +98,7 @@ export PATH=$PATH:$DOTNET_ROOT
 # Kotlin Setup - Android Studio Plugin
 export KOTLIN_ROOT=$HOME/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc
 export PATH=$PATH:$KOTLIN_ROOT/bin
+export CAPACITOR_ANDROID_STUDIO_PATH=$HOME/Applications/Android\ Studio.app
 
 # Maven Setup
 export M2_HOME="/opt/apache-maven-3.9.6"
@@ -185,7 +186,7 @@ zinit light zsh-users/zsh-completions
 
 
 # Custom Alias
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias vi="nvim"
 alias nv="nvim"
 alias cat="bat --style=auto"
@@ -203,3 +204,7 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # Set vim
 set -o vi
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
