@@ -208,3 +208,4 @@ set -o vi
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"

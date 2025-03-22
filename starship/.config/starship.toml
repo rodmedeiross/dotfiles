@@ -180,7 +180,7 @@ disabled = false
 
 [kubernetes]
 format = 'on [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
+disabled = true
 
 [kubernetes.context_aliases]
 "clcreative-k8s-staging" = "cl-k8s-staging"
